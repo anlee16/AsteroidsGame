@@ -29,6 +29,8 @@ public void keyPressed(){
   bob.turn(5);
   if( key =='d')
   bob.turn (-5);
+  if (key == ' ')
+  bob.hyperspace();
 }
 
 
