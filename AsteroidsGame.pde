@@ -24,11 +24,11 @@ public void keyPressed(){
   if( key =='w')
   bob.accelerate(.01);
   if( key =='s')
-  bob.accelerate(-.5);
+  bob.accelerate(-.01);
   if( key =='a')
-  bob.turn(-5);
+  bob.turn(5);
   if( key =='d')
-  bob.turn (5);
+  bob.turn (-5);
 }
 
 
