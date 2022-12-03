@@ -11,7 +11,7 @@ public void setup()
     stars[i]= new Star();
   }
   for (int i = 0; i < 20; i++) {
-   roid.add (new Asteroid());
+    roid.add (new Asteroid());
   }
 
 }
@@ -29,8 +29,8 @@ public void draw()
     float myDist = dist((float)roid.get(i).getX(), (float)roid.get(i).getY(), (float)bob.getX(), (float)bob.getY());
     if (myDist < 30) {
       roid.remove(i);
-   }
- }
+    }
+  }
 
 }
 public void keyPressed(){
