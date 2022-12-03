@@ -1,47 +1,21 @@
 <!DOCTYPE html>
 	<head>
 		<meta charset="utf-8">
-		<title>spaceship</title>
+		<title>Asteroid</title>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="styles.css">
 		<script src="processing.js"></script>
 	</head>
 	<body>
 		<header>
-			<h1>SpaceSHIPS</h1>
+			<h1>spaceSHIPS</h1>
 		</header>
 			<section id="content">
 				<canvas id="AsteroidsGame" data-processing-sources="Asteroid.pde AsteroidsGame.pde Floater.pde Spaceship.pde Star.pde">
-				class Asteroid extends Floater
-{
-  private double rotSpeed; 
-  public Asteroid() {
-    corners = 6;
-    xCorners = new int[]{-11, 7, 12, 6, -11, -15}; 
-    yCorners = new int[]{-8, -8, 0, 10, 8, 0};
-    myColor = color(79, 91, 102);
-    myCenterX = (int)(Math.random()*800);
-    myCenterY = (int)(Math.random()*800);
-    myXspeed = (int)(Math.random()*5)-3;
-    myYspeed = (int)(Math.random()*5)-3;
-    myPointDirection = 0;
-    rotSpeed = (int)(Math.random()*7);
-  }
-  public void move() { 
-    turn (rotSpeed);
-    super.move();
-  }
-  public double getX() {
-    return myCenterX;
-  }
-  public double getY() {
-    return myCenterY;
-  }
-}
 				</canvas>
 		    </section>
 	    <footer>
-		    Press w to move, a to go left, s to slow down, and d to go right! Press space to stop!!!!!
+		   Press w to move, a to go left, s to slow down, and d to go right! Press space to stop!!!!!
 	    </footer>
 	</body>
 </html>
