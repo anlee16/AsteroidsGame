@@ -1,7 +1,7 @@
 Spaceship bob = new Spaceship();
 Star[] stars = new Star[100];
 ArrayList <Asteroid> roid = new ArrayList <Asteroid>();
-
+ArrayList <Bullet> llet = new ArrayList <Bullet> ();
 public void setup() 
 {
   size(500,500);
@@ -31,7 +31,20 @@ public void draw()
       roid.remove(i);
     }
   }
-
+   for (int i = 0; i < llet.size(); i++) {
+    for (int j = 0; j < roid.size(); j++) {
+      if (dist((float)(roid.get(j).getX()),(float)(roid.get(j).getY()),(float)(llet.get(i).getCenterX()),(float)(llet.get(i).getCenterY())) < 25){
+        llet.remove(i);
+        roid.remove(j);
+        roid.add(new Asteroid());
+        break;
+      }
+    }
+  }
+  for (int i = 0; i < llet.size(); i++) {
+    llet.get(i).move();
+    llet.get(i).show();
+  }
 }
 public void keyPressed(){
   if( key =='w')
@@ -44,4 +57,8 @@ public void keyPressed(){
   bob.turn (-5);
   if (key == ' ')
   bob.hyperspace();
+}
+
+public void mousePressed() {
+  llet.add(new Bullet(bob));
 }
